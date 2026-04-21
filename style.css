@@ -1,1 +1,93 @@
-/* Add styles here */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #333333;
+  --container-bg: #f8f9fa;
+  --button-bg: #007bff;
+  --button-text: #ffffff;
+  --lotto-number-bg: #ffc107;
+  --lotto-number-text: #000000;
+}
+
+[data-theme='dark'] {
+  --bg-color: #121212;
+  --text-color: #e0e0e0;
+  --container-bg: #1e1e1e;
+  --button-bg: #375a7f;
+  --button-text: #ffffff;
+  --lotto-number-bg: #fd7e14;
+  --lotto-number-text: #ffffff;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+  background-color: var(--container-bg);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: background-color 0.3s;
+}
+
+h1 {
+  margin-bottom: 1.5rem;
+}
+
+.lotto-numbers {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 1.5rem;
+  min-height: 50px;
+}
+
+.number-circle {
+  width: 50px;
+  height: 50px;
+  background-color: var(--lotto-number-bg);
+  color: var(--lotto-number-text);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  border: none;
+  border-radius: 6px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+#theme-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: 1px solid var(--text-color);
+  color: var(--text-color);
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 4px;
+}

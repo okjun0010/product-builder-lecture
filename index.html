@@ -1,17 +1,36 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lotto Number Generator</title>
-  <link href='/style.css' rel='stylesheet'>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expression Analysis AI</title>
+  <link href="/style.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
 </head>
 <body data-theme="light">
   <button id="theme-toggle">Dark Mode</button>
+  
   <div class="container">
-    <h1>Lotto Number Generator</h1>
-    <div class="lotto-numbers"></div>
-    <button id="generator-btn">Generate Numbers</button>
+    <h1>Expression Analysis AI</h1>
+    <p class="subtitle">Upload a photo to see if you look surprised or sad!</p>
+    
+    <div class="main-content">
+      <div id="image-container">
+        <img id="image-preview" src="#" alt="Your Image" style="display: none;" />
+        <div id="upload-placeholder">
+          <p>No image uploaded yet</p>
+        </div>
+      </div>
+      
+      <div class="controls">
+        <input type="file" id="image-upload" accept="image/*" style="display: none;">
+        <button type="button" id="upload-btn">Upload Image</button>
+      </div>
+
+      <div id="label-container"></div>
+    </div>
+
     <div class="contact-section">
       <hr>
       <h3>Partnership Inquiry</h3>
@@ -25,26 +44,18 @@
         <button type="submit" class="submit-btn">Send Inquiry</button>
       </form>
     </div>
+
     <div id="disqus_thread" style="margin-top: 2rem;"></div>
-    <script>
-        /**
-        *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-        *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-        /*
-        var disqus_config = function () {
-        this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-        };
-        */
-        (function() { // DON'T EDIT BELOW THIS LINE
-        var d = document, s = d.createElement('script');
-        s.src = 'https://productbuilder-illb08er3r.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-        })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
   </div>
-  <script defer type="text/javascript" src="/main.js"></script>
+
+  <script defer src="/main.js"></script>
+  <script>
+      (function() {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://productbuilder-illb08er3r.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+      })();
+  </script>
 </body>
 </html>

@@ -3,24 +3,44 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Expression Analysis AI</title>
+  <title>Expression Analysis AI - Free Facial Expression Recognition Tool</title>
+  <meta name="description" content="Analyze your facial expressions (surprised, sad, and more) instantly using AI. All processing is done locally in your browser for 100% privacy.">
+  <meta name="keywords" content="facial expression analysis, AI emotion detector, teachable machine, tensorflow.js, privacy-focused AI">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://okjun0010.github.io/product-builder-lecture/">
+  <meta property="og:title" content="Expression Analysis AI - Privacy-Focused Emotion Detector">
+  <meta property="og:description" content="Instant facial expression analysis using AI. No images are uploaded to any server.">
+
   <link href="/style.css" rel="stylesheet">
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8804599297060043"
-     crossorigin="anonymous"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8804599297060043" crossorigin="anonymous"></script>
   <meta name="google-adsense-account" content="ca-pub-8804599297060043">
   <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
 </head>
 <body data-theme="light">
-  <button id="theme-toggle">Dark Mode</button>
+  <header>
+    <nav class="nav-container">
+      <div class="logo">AI Expression</div>
+      <ul class="nav-links">
+        <li><a href="#how-it-works">How it Works</a></li>
+        <li><a href="#about-ai">About AI</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button id="theme-toggle">Dark Mode</button>
+    </nav>
+  </header>
   
-  <div class="container">
-    <h1>Expression Analysis AI</h1>
-    <p class="subtitle">Upload a photo to see if you look surprised or sad!</p>
+  <main class="container">
+    <section id="hero">
+      <h1>Expression Analysis AI</h1>
+      <p class="subtitle">Upload a photo to see if you look surprised or sad!</p>
+    </section>
     
     <div class="main-content">
       <div id="image-container">
-        <img id="image-preview" src="#" alt="Your Image" style="display: none;" />
+        <img id="image-preview" src="#" alt="Your facial expression preview" style="display: none;" />
         <div id="upload-placeholder">
           <p>No image uploaded yet</p>
         </div>
@@ -34,22 +54,50 @@
       <div id="label-container"></div>
     </div>
 
-    <div class="contact-section">
+    <hr class="section-divider">
+
+    <section id="how-it-works" class="text-section">
+      <h2>How to Use</h2>
+      <ol>
+        <li><strong>Prepare your photo:</strong> Take a clear photo of your face or choose one from your device.</li>
+        <li><strong>Upload:</strong> Click the "Upload Image" button above and select your file.</li>
+        <li><strong>Analyze:</strong> Our AI model will instantly process the image and show you the probability of each expression.</li>
+      </ol>
+      <p class="privacy-note"><strong>Privacy Fact:</strong> Your images are processed entirely on your device. We never see or store your photos.</p>
+    </section>
+
+    <section id="about-ai" class="text-section">
+      <h2>About the Technology</h2>
+      <p>This tool uses <strong>Google's Teachable Machine</strong>, a fast and easy way to create machine learning models. Under the hood, it's powered by <strong>TensorFlow.js</strong>, which allows high-performance AI models to run directly in your web browser.</p>
+      <p>By using your device's GPU/CPU locally, we can provide instant results while ensuring your personal data stays on your machine.</p>
+    </section>
+
+    <div class="contact-section" id="contact">
       <hr>
       <h3>Partnership Inquiry</h3>
       <form action="https://formspree.io/f/xvzdbvyp" method="POST" id="contact-form">
         <div class="form-group">
-          <input type="email" name="email" placeholder="Your Email Address" required>
+          <input type="email" name="email" placeholder="Your Email Address" aria-label="Email Address" required>
         </div>
         <div class="form-group">
-          <textarea name="message" placeholder="Your Message" required></textarea>
+          <textarea name="message" placeholder="Your Message" aria-label="Message" required></textarea>
         </div>
         <button type="submit" class="submit-btn">Send Inquiry</button>
       </form>
     </div>
 
     <div id="disqus_thread" style="margin-top: 2rem;"></div>
-  </div>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <p>&copy; 2026 Expression Analysis AI. All rights reserved.</p>
+      <ul class="footer-links">
+        <li><a href="/privacy.html">Privacy Policy</a></li>
+        <li><a href="/terms.html">Terms of Service</a></li>
+      </ul>
+    </div>
+  </footer>
 
   <script defer src="/main.js"></script>
   <script>
